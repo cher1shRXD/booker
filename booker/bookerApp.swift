@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct bookerApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject var loginState = LoginState() // 전역 상태 관리
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        var body: some Scene {
+            WindowGroup {
+                ContentView()
+                    .environmentObject(loginState) // 모든 뷰에 상태 전달
+            }
         }
-    }
 }

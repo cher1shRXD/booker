@@ -23,7 +23,7 @@ struct Header: View {
             }
             .padding(.horizontal, 16)
             .padding(.top)
-        }.background(Color.gray.opacity(0.1))
+        }
     }
 }
 
