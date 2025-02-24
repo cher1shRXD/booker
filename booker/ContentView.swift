@@ -16,7 +16,7 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(LoginState()) // 미리보기에서도 환경 객체 제공
+        .environmentObject(LoginState())
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
 
