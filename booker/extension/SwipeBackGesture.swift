@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// 사용자 정의 제스처를 만드는 코드
 struct SwipeBackGesture: ViewModifier {
     @Environment(\.presentationMode) var presentationMode
     
@@ -24,7 +23,6 @@ struct SwipeBackGesture: ViewModifier {
     }
 }
 
-// 모든 View에서 쉽게 사용할 수 있는 확장
 extension View {
     func swipeBackGesture() -> some View {
         self.modifier(SwipeBackGesture())

@@ -4,12 +4,14 @@ struct ContentView: View {
     @EnvironmentObject var loginState: LoginState
 
     var body: some View {
-        if !loginState.hasSeenOnboarding {
-            OnboardingView()
-        } else if !loginState.isLoggedIn {
-            AuthView()
-        } else {
-            MainView()
+        NavigationStack{
+            TabbarView()
+                .fullScreenCover(isPresented: Binding<Bool>(
+                    get: { !loginState.hasSeenOnboarding },
+                    set: { loginState.hasSeenOnboarding = !$0 }
+                )) {
+                    OnboardingView()
+                }
         }
     }
 }

@@ -1,10 +1,3 @@
-//
-//  TabView.swift
-//  booker
-//
-//  Created by dgsw13 on 2/24/25.
-//
-
 import SwiftUI
 
 struct TabbarView: View {
@@ -12,18 +5,20 @@ struct TabbarView: View {
     @State var selectedTab: Tab = .main
     
     var body: some View {
-        
         VStack(spacing: 0) {
+            Header()
             switch selectedTab {
             case .main:
                 MainView()
             case .library:
                 LibraryView()
             }
-            CustomTabView(selectedTab: $selectedTab)
-                .padding(.bottom, 16)
+            
+            Tabbar(selectedTab: $selectedTab)
+                .padding(.bottom, 32)
+            
         }
+        .background(Color.gray.opacity(0.1))
         .edgesIgnoringSafeArea(.bottom)
-
     }
 }

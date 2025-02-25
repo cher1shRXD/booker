@@ -11,28 +11,28 @@ struct MainView: View {
     @EnvironmentObject var loginState: LoginState
     
     var body: some View {
-        VStack(spacing: 0){
-            NavigationStack {
-                Header()
-                ScrollView {
-                    VStack {
-                        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0){
+            ScrollView {
+                VStack {
+                    VStack(alignment: .leading) {
+                        HStack{
                             Text("Hello, World!")
                                 .font(.headline)
+                            Spacer()
                         }
+                        
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 16)
-                    
                 }
-                .refreshable {
-                    
-                }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 16)
                 
             }
-        }.background(Color.gray.opacity(0.1))
+            .refreshable {
+                
+            }
+        }.frame(maxWidth: .infinity)
     }
+    
 }
 
 #Preview {
