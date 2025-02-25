@@ -15,7 +15,7 @@ struct TabbarView: View {
             }
             
             Tabbar(selectedTab: $selectedTab)
-                .padding(.bottom, 32)
+                .padding(.bottom, 28)
             
         }
         .background(Color.gray.opacity(0.1))

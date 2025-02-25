@@ -68,13 +68,18 @@ struct AsyncImageView: View {
     }
     
     var body: some View {
-        Group {
-            if let image = loader.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } else {
-                ProgressView()
+        GeometryReader { geometry in
+            Group {
+                if let image = loader.image {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                } else {
+                    ProgressView()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .background(Color.gray.opacity(0.2))
+                }
             }
         }
         .onAppear {

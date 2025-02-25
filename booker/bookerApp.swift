@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct bookerApp: App {
-    @StateObject var loginState = LoginState() // 전역 상태 관리
+    @StateObject var loginState = LoginState()
 
         var body: some Scene {
             WindowGroup {
                 ContentView()
-                    .environmentObject(loginState) // 모든 뷰에 상태 전달
+                    .environmentObject(loginState)
             }
         }
 }
+

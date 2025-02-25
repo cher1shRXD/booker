@@ -11,7 +11,7 @@ struct ProfileView: View {
                     UserInfo(name: "김철수", phone: "010-1234-5678")
                     VStack {
                         HStack{
-                            Text("나의 독서량은?")
+                            Text("나의 소설력은?")
                                 .fontWeight(.medium)
                                 .font(.system(size: 14))
                             Spacer()
@@ -32,7 +32,7 @@ struct ProfileView: View {
                 .padding(.top, 8)
             }
             .refreshable {
-                // 새로고침 로직
+                
             }
             
             VStack {
