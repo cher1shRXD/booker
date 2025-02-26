@@ -45,7 +45,7 @@ struct Tabbar: View {
                 }
                 .padding(.horizontal, UIScreen.main.bounds.width/4 - 30)
             }
-            .frame(height: 40)
+            .frame(height: 56)
         }
         .frame(maxWidth: .infinity)
     }
@@ -63,4 +63,9 @@ struct RoundedCorner: Shape {
         )
         return Path(path.cgPath)
     }
+}
+
+
+#Preview {
+    Tabbar(selectedTab: .constant(Tab.main))
 }

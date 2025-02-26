@@ -7,3 +7,4 @@ struct LibraryView: View {
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+

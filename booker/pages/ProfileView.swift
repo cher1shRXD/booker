@@ -58,18 +58,7 @@ struct ProfileView: View {
         .background(Color.gray.opacity(0.1))
         .navigationTitle("프로필")
         .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: { dismiss() }) {
-                    HStack(spacing: 4) {
-                        Image(systemName: "chevron.left")
-                        Text("홈").fontWeight(.semibold)
-                    }
-                    .foregroundColor(.blue)
-                }
-            }
-        }
-        .swipeBackGesture()
+        .backButton()
     }
 }
 

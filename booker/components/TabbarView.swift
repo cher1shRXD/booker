@@ -15,10 +15,7 @@ struct TabbarView: View {
             }
             
             Tabbar(selectedTab: $selectedTab)
-                .padding(.bottom, 28)
-            
         }
         .background(Color.gray.opacity(0.1))
-        .edgesIgnoringSafeArea(.bottom)
     }
 }
